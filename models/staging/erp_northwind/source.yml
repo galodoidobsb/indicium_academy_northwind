@@ -26,4 +26,4 @@ sources:
           tests:
             - unique
             - not_null
-    - name: orders_details
+    - name: order_details

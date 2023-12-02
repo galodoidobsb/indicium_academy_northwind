@@ -1,0 +1,14 @@
+version: 2
+models:
+  - name: fact_sales
+    description: Tabela com fatos de vendas cada linha descreve informações de um produto vendido.
+    columns:
+      - name: sk_order_item
+        description: Chave surrogate da tabela fatos vendas.
+        tests:
+          - not_null
+          - unique
+      - name: weighted_freight
+        description: Métrica criada dividindo o frete pelo número de produtos diferentes naquela nota fiscal.
+      - name: gross_total
+        description: Valor da quantidade vezes o preço unitário sem descontos.
